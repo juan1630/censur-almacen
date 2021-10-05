@@ -6,7 +6,7 @@ const idUser = user._id;
 
 const getModules = () => {
 
-    fetch(`http://localhost:3200/modulos/${idUser}`, {
+    fetch(`https://blooming-sea-53514.herokuapp.com/modulos/${idUser}`, {
         method: 'POST',
         headers:{
             'Content-Type': 'application/json'
