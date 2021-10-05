@@ -15,7 +15,7 @@ btnLogin.addEventListener('click', (e) => {
 
     console.log(user);
 
-    fetch('http://localhost:3200/login/TLYC01', {
+    fetch('https://blooming-sea-53514.herokuapp.com/login/TLYC01', {
         method: 'POST',
         body:JSON.stringify(user),
         headers:{
