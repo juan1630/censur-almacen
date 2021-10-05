@@ -1,0 +1,14 @@
+{
+    "short_name":"Censur",
+    "name":"Censur almacen inteligente",
+    "display":"standalone",
+    "background_color": "#3498db",
+    "theme_color": "#3498db",
+    "orientation": "portrait",
+        "icons": [
+            {
+                "src": "assets/img/Recurso 1.png",
+                "type": "image/png"
+            }
+        ]
+}

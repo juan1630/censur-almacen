@@ -1,13 +1,20 @@
-const html5QrCode = new Html5Qrcode("reader");
+const html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: {width: 250, height: 250} }, false);
+
 const qrCodeSuccessCallback =  (decodedText, decodedResult) => {
     // console.log( decodedText );
-
-    console.log(decodedResult);
-    fetch( decodedResult )
+    
+    console.log(decodedText);
+    fetch( decodedText )
     .then(   resp => resp.json())
     .then( data => {
-        console.log(data);
+        
+        if(data.ok ) {
+            
+            Swal.fire('Venta realizada','El producto se vendió', 'success')
+        }
     });
-  
+    
 };
 
+
+html5QrcodeScanner.render(qrCodeSuccessCallback);

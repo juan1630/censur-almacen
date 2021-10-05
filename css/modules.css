@@ -1,0 +1,27 @@
+.card{
+    width:90%;
+    margin-bottom: 0.9rem;  
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0.3rem;
+    border-radius: 2rem;
+    height:3rem;
+    text-align:center;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+
+}
+
+
+.card > p{
+    font-size:1.3rem;
+    font-weight: 400;
+    color: #686A8F;
+}
+
+a{
+    font-size:1.2rem;
+    color:#686A8F;
+    margin-left: 70%;
+    margin-top: 10%;
+    text-decoration: none
+}
