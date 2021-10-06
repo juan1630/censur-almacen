@@ -38,3 +38,28 @@ a{
 .link-text-module:hover{
     text-decoration: none;
 }
+
+.cursor-pointer {
+    cursor:pointer;
+}
+
+
+
+.img-fluid {
+    width: 100%;
+    margin-top: 0;
+}
+
+.text-footer {
+    margin-bottom: 0.2rem;
+    color: gray;
+    display: inline-block;
+    margin-left: 4rem;
+    margin-top: 0.8rem ;
+}
+
+footer {
+    border: none;
+    position: fixed;
+    bottom: 0;
+}

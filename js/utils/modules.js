@@ -1,3 +1,5 @@
+const btnlogOut = document.querySelector('#bntLogout');
+
 const contentModules = document.querySelector("#content-modules");
 const user = JSON.parse(localStorage.getItem('user') || '');
 const titleSaludo = document.querySelector('#title-saludo');
@@ -34,4 +36,16 @@ const getModules = () => {
 }
 
 
-getModules()
+const deleSessionStorage= () => {
+
+    console.log( localStorage.getItem('user'))
+    if(localStorage.getItem('user') == null ) {
+        
+        localStorage.removeItem('user');
+    }
+    window.location.href = '../index.html'
+}
+
+btnlogOut.addEventListener('click',  deleSessionStorage );
+
+getModules();
