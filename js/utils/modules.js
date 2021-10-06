@@ -4,6 +4,9 @@ const titleSaludo = document.querySelector('#title-saludo');
 titleSaludo.innerHTML += user.nombre;
 const idUser = user._id;
 
+
+const redirectModule = ( routeModule ) => window.location.href = routeModule;
+
 const getModules = () => {
 
     fetch(`https://blooming-sea-53514.herokuapp.com/modulos/${idUser}`, {
@@ -15,13 +18,15 @@ const getModules = () => {
     .then(resp => resp.json())
     .then(data => {
         data.usuario.forEach(modulo => {
-            console.log(modulo)
+  
             contentModules.innerHTML += `
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-6 col-md-6">
                 <div class="card">
-                    <p>
-                        ${modulo.modules.nameModule}
-                    </p>
+                    <a class="link-text-module" href=${modulo.modules.route} >
+                        <p>
+                            ${modulo.modules.nameModule} 
+                        </p>
+                    </a>
                 </div>
             </div>`;
         });

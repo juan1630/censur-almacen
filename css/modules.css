@@ -25,3 +25,16 @@ a{
     margin-top: 10%;
     text-decoration: none
 }
+
+
+.link-text-module {
+    text-decoration: none;
+    margin-left: 0;
+    margin-top: 0;
+    font-size:1.3rem;
+}
+
+
+.link-text-module:hover{
+    text-decoration: none;
+}
