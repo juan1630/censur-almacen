@@ -1,5 +1,8 @@
 {
+    "manifest_version": 1,
     "short_name":"Censur",
+    "version":"beta 1",
+    "default_locale": "es",
     "name":"Censur almacen inteligente",
     "display":"standalone",
     "background_color": "#3498db",
