@@ -2,6 +2,7 @@
     "manifest_version": 1,
     "short_name":"Censur",
     "version":"beta 1",
+    "start_url":"index.html",
     "default_locale": "es",
     "homepage_url":"https://juan1630.github.io/censur-almacen/index.html",
     "name":"Censur almacen inteligente",
