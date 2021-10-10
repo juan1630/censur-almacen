@@ -11,15 +11,20 @@ if( localStorage.getItem('user')  != null ) {
             contador += 1;
             if(decodedText.includes("https://blooming-sea-53514.herokuapp.com/")){
     
-                fetch( decodedText )
+                fetch( decodedText, {
+                    method: 'POST'
+                } )
                     .then(   resp => resp.json())
                     .then( data => {
                     if(data.ok ) {
                         if(data.data.status != 'STOCK') {
                             Swal.fire('El código ya ha sido usado', 'Intenta con otro codigo', 'error');
+                            window.location.href = '../index.html';
                             return;
                         }else {
                             Swal.fire('Venta realizada','El producto se vendió', 'success');
+                            window.location.href = '../index.html';
+    
                             return;
                         }            
                     }
@@ -28,6 +33,7 @@ if( localStorage.getItem('user')  != null ) {
             }else {
     
                 Swal.fire('Codgio Qr invalido', 'Ingresa un código de censur', 'error');
+                window.location.href = '../index.html';
                 return;
             }
     

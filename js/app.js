@@ -13,8 +13,6 @@ btnLogin.addEventListener('click', (e) => {
 
     e.preventDefault();
 
-    console.log(user);
-
     fetch('https://blooming-sea-53514.herokuapp.com/login/TLYC01', {
         method: 'POST',
         body:JSON.stringify(user),
@@ -37,3 +35,24 @@ btnLogin.addEventListener('click', (e) => {
 
 
 
+const getLocation  = () => {
+    
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition( position => {
+           if(position.latitud <= 18.825300) {
+            alert('No Se puede')
+           }else {
+            alert('Si se puede')
+
+           }
+        })
+    }
+}
+
+/***
+ * 
+ * 
+ * 18.5718 985902.9
+ */
+
+getLocation();
