@@ -33,21 +33,21 @@ btnLogin.addEventListener('click', (e) => {
     })
 });
 
-
-
-const getLocation  = () => {
+//  este codigo obtiene la latitud y la longitud
+// const getLocation  = () => {
     
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition( position => {
-           if(position.latitud <= 18.825300) {
-            alert('No Se puede')
-           }else {
-            alert('Si se puede')
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition( position => {
+//            if(position.coords.latitud >= 18.825300 && position.coords.latitude <= 18.825300 ) { //18.825216
+//             alert('No Se puede')
+//            }else {
+//                console.log(position)
+//             alert('Si se puede')
 
-           }
-        })
-    }
-}
+//            }
+//         })
+//     }
+// }
 
 /***
  * 
@@ -55,4 +55,4 @@ const getLocation  = () => {
  * 18.5718 985902.9
  */
 
-getLocation();
+// getLocation();

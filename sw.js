@@ -61,7 +61,7 @@ self.addEventListener('fetch', (e)=> {
         
         if( resp) {
         
-         actualizarCaheDinamico( e.request, resp);
+            actualizarCacheStatico( STATIC_CACHE ,e.request);
         return resp;
 
         }else{
@@ -87,3 +87,13 @@ const actualizarCaheDinamico = (req, resp) => {
         return resp;
     }
 }
+
+const actualizarCacheStatico = (req) => {
+    
+    
+    return fetch(req)
+    .then( resp => {
+        return actualizarCaheDinamico(req, resp);
+    });
+}
+
