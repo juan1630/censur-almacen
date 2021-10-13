@@ -64,7 +64,7 @@ const stopScanning = async () => {
 
         if(data) {
             Swal.fire('Venta realizada','El producto se vendió', 'success');
-            window.location.href = '../index.html';
+           // window.location.href = '../index.html';
         }
     } catch (error) {
         console.log(error);
