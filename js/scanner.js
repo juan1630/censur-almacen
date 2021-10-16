@@ -68,7 +68,7 @@ const stopScanning = async () => {
         }
     } catch (error) {
         console.log(error);
-        window.location.href = '../modules.html';
+        window.location.href = '../pages/modules.html';
     }
 
    return
