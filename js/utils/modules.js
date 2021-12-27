@@ -11,7 +11,8 @@ const redirectModule = ( routeModule ) => window.location.href = routeModule;
 
 const getModules = () => {
 
-    fetch(`https://blooming-sea-53514.herokuapp.com/modulos/${idUser}`, {
+    // https://blooming-sea-53514.herokuapp.com/modulos/${idUser}
+    fetch(`http://localhost:3200/modulos/${idUser}`, {
         method: 'POST',
         headers:{
             'Content-Type': 'application/json'
@@ -19,7 +20,8 @@ const getModules = () => {
     })
     .then(resp => resp.json())
     .then(data => {
-        data.usuario.forEach(modulo => {
+        console.log(data)
+        data.data.forEach(modulo => {
   
             contentModules.innerHTML += `
             <div class="col-sm-6 col-md-6">
@@ -38,7 +40,6 @@ const getModules = () => {
 
 const deleSessionStorage= () => {
 
-    console.log( localStorage.getItem('user'))
     if(localStorage.getItem('user') == null ) {
         
         localStorage.removeItem('user');

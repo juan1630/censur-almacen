@@ -28,3 +28,24 @@ input{
 
 }
 
+.card-clients{
+
+    width:90%;
+    margin-bottom: 0.9rem;  
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    padding: 0.3rem;
+    border-radius: 1.8rem;
+
+    text-align:center;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    border-bottom: 1px solid rgba(112, 112, 112, 0.2) ;
+}
+
+.img-fluid {
+    position: fixed;
+    bottom: 0;
+    right: 16rem;
+}
+
